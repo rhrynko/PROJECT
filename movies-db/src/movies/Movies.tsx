@@ -1,3 +1,32 @@
-export const Movies = () => {
-  return <div>Movies are coming soon...</div>
+import { connect } from "react-redux";
+import { Movie } from "../reducers/movies";
+import { RootState } from "../store";
+import { MovieCard } from "./MovieCard";
+
+import './Movies.css';
+
+type Props = {
+  movies: Movie[];
 };
+
+
+const Movies = ({ movies }: Props) => {
+  return (
+    <section>
+      <div className="Movies-list">
+        {movies.map((movie) => (
+          <MovieCard key={movie.id} movie={movie} />
+        ))}
+      </div>
+    </section>
+  )
+};
+
+
+const mapStateToProps = (state: RootState) => ({
+  movies: state.movies.top,
+})
+
+const connector = connect(mapStateToProps)
+
+export default connector(Movies);
