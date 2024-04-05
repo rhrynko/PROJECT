@@ -32,6 +32,13 @@ const initialState: MoviesState = {
       popularity: 0.97,
       overview: "Batman raises the stakes in his war on crime",
     },
+    {
+      id: 4,
+      title: "The Godfather 2",
+      popularity: 0.96,
+      overview:
+        "The early life and career of Vito Corleone in 1920s New York City",
+    },
   ],
 };
 

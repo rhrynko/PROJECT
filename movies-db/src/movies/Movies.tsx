@@ -3,7 +3,7 @@ import { Movie } from "../reducers/movies";
 import { RootState } from "../store";
 import { MovieCard } from "./MovieCard";
 
-import './Movies.css';
+import styles from './Movies.module.scss';
 
 type Props = {
   movies: Movie[];
@@ -13,7 +13,7 @@ type Props = {
 const Movies = ({ movies }: Props) => {
   return (
     <section>
-      <div className="Movies-list">
+      <div className={styles.list}>
         {movies.map((movie) => (
           <MovieCard key={movie.id} movie={movie} />
         ))}
