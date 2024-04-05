@@ -8,7 +8,6 @@ type Props = {
   movie: Movie;
 };
 
-
 export const MovieCard = ({ movie }: Props) => {
 
   return (
@@ -24,5 +23,3 @@ export const MovieCard = ({ movie }: Props) => {
     </div>
   )
 };
-
-

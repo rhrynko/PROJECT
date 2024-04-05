@@ -9,7 +9,6 @@ type Props = {
   movies: Movie[];
 };
 
-
 const Movies = ({ movies }: Props) => {
   return (
     <section>
@@ -21,7 +20,6 @@ const Movies = ({ movies }: Props) => {
     </section>
   )
 };
-
 
 const mapStateToProps = (state: RootState) => ({
   movies: state.movies.top,
